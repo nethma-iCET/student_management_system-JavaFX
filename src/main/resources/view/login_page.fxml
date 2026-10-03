@@ -7,33 +7,57 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+<AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@../css/login-page.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.login.LoginPageController">
 
-<AnchorPane prefHeight="529.0" prefWidth="499.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.login.LoginPageController">
-   <children>
-      <Label alignment="CENTER" layoutX="123.0" layoutY="32.0" prefHeight="51.0" prefWidth="253.0" text="Login Page">
-         <font>
-            <Font name="Comic Sans MS" size="36.0" />
-         </font>
-      </Label>
-      <Label layoutX="79.0" layoutY="344.0" prefHeight="24.0" prefWidth="148.0" text="User Name:">
-         <font>
-            <Font name="Bookman Old Style" size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="79.0" layoutY="381.0" prefHeight="24.0" prefWidth="126.0" text="Password:">
-         <font>
-            <Font name="Bookman Old Style" size="20.0" />
-         </font>
-      </Label>
-      <TextField fx:id="txtUserName" layoutX="239.0" layoutY="344.0" prefHeight="25.0" prefWidth="182.0" />
-      <Button fx:id="btnLogIn" layoutX="181.0" layoutY="450.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="25.0" prefWidth="116.0" text="Log In" />
-      <ImageView fitHeight="184.0" fitWidth="213.0" layoutX="147.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/login_page_image.jpg" />
-         </image>
-      </ImageView>
-      <PasswordField fx:id="txtPassword" layoutX="239.0" layoutY="381.0" prefHeight="25.0" prefWidth="184.0" />
-   </children>
+    <children>
+        <!-- Left visual section -->
+        <AnchorPane prefHeight="600.0" prefWidth="420.0" styleClass="left-panel">
+            <children>
+                <Label layoutX="45.0" layoutY="70.0" styleClass="brand-title" text="StudentHub">
+                    <font>
+                        <Font size="30.0" />
+                    </font>
+                </Label>
+
+                <Label layoutX="45.0" layoutY="115.0" prefHeight="46.0" prefWidth="192.0" styleClass="brand-subtitle" text="Student Management&#10;System">
+               <font>
+                  <Font name="Dubai Medium" size="10.0" />
+               </font></Label>
+
+                <ImageView fitHeight="264.0" fitWidth="339.0" layoutX="41.0" layoutY="224.0" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/login_page_img.jpg" />
+                    </image>
+                </ImageView>
+
+                <Label layoutX="45.0" layoutY="540.0" styleClass="footer-text" text="Manage students easily and securely." />
+            </children>
+        </AnchorPane>
+
+        <!-- Right login section -->
+        <VBox layoutX="510.0" layoutY="105.0" prefWidth="320.0" spacing="14.0">
+            <children>
+                <Label styleClass="login-heading" text="Welcome Back">
+               <font>
+                  <Font name="Century Schoolbook Bold" size="12.0" />
+               </font></Label>
+                <Label styleClass="login-description" text="Sign in to continue to your controllers.dashboard." />
+
+                <Label styleClass="input-label" text="Username" />
+                <TextField fx:id="txtUserName" prefHeight="44.0" promptText="Enter your username" styleClass="input-field" />
+
+                <Label styleClass="input-label" text="Password" />
+                <PasswordField fx:id="txtPassword" prefHeight="44.0" promptText="Enter your password" styleClass="input-field" />
+
+                <Label styleClass="forgot-password" text="Forgot password?" />
+
+                <Button fx:id="btnLogIn" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="46.0" prefWidth="320.0" styleClass="login-button" text="Log In" />
+
+                <Label styleClass="copyright" text="© 2026 StudentHub Management System" />
+            </children>
+        </VBox>
+    </children>
 </AnchorPane>

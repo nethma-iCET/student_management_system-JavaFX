@@ -1,0 +1,92 @@
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-background-color: #ffffff;
+}
+
+/* Left side */
+.left-panel {
+    -fx-background-color: linear-gradient(to bottom right, #2563eb, #1e40af);
+}
+
+.brand-title {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.brand-subtitle {
+    -fx-text-fill: #dbeafe;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.footer-text {
+    -fx-text-fill: #dbeafe;
+    -fx-font-size: 13px;
+}
+
+/* Right side */
+.login-heading {
+    -fx-text-fill: #172554;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+.login-description {
+    -fx-text-fill: #64748b;
+    -fx-font-size: 14px;
+    -fx-padding: 0 0 18 0;
+}
+
+.input-label {
+    -fx-text-fill: #334155;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 4 0 0 0;
+}
+
+.input-field {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 0 14px;
+    -fx-font-size: 14px;
+}
+
+.input-field:focused {
+    -fx-background-color: white;
+    -fx-border-color: #2563eb;
+    -fx-border-width: 1.5px;
+}
+
+.forgot-password {
+    -fx-text-fill: #2563eb;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_RIGHT;
+    -fx-max-width: Infinity;
+    -fx-padding: 3 0 8 0;
+}
+
+.login-button {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+
+.login-button:hover {
+    -fx-background-color: #1d4ed8;
+}
+
+.login-button:pressed {
+    -fx-background-color: #1e40af;
+}
+
+.copyright {
+    -fx-text-fill: #94a3b8;
+    -fx-font-size: 11px;
+    -fx-padding: 24 0 0 0;
+}
