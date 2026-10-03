@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="650.0" prefWidth="1100.0" stylesheets="@../css/update_student_page.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.student.UpdateStudentPageController">
+
+    <left>
+        <VBox prefWidth="240.0" styleClass="sidebar">
+            <padding>
+                <Insets bottom="25.0" left="20.0" right="20.0" top="28.0" />
+            </padding>
+
+            <children>
+                <Label styleClass="sidebar-logo" text="StudentHub" />
+                <Label styleClass="sidebar-subtitle" text="ADMIN PANEL" />
+
+                <VBox spacing="8.0">
+                    <padding>
+                        <Insets top="42.0" />
+                    </padding>
+                    <children>
+                        <Button onAction="#dashboardOnAction" styleClass="menu-button" text="⌂   Dashboard" />
+                        <Button onAction="#addStudentOnAction" styleClass="menu-button" text="👨‍🎓   Add Student" />
+                        <Button onAction="#updateStudentOnAction" styleClass="menu-button, active-menu" text="✎   Update Student" />
+                        <Button onAction="#deleteStudentOnAction" styleClass="menu-button" text="⌫   Delete Student" />
+                        <Button onAction="#viewStudentsOnAction" styleClass="menu-button" text="☷   View Students" />
+                        <Button onAction="#addMarksOnAction" styleClass="menu-button" text="★   Add Marks" />
+                        <Button onAction="#manageSubjectsOnAction" styleClass="menu-button" text="▣   Manage Subjects" />
+                    </children>
+                </VBox>
+
+                <AnchorPane VBox.vgrow="ALWAYS" />
+
+                <Button onAction="#logoutOnAction" styleClass="logout-button" text="⇥   Log Out" />
+            </children>
+        </VBox>
+    </left>
+
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="90.0" styleClass="top-header">
+            <padding>
+                <Insets left="35.0" right="35.0" />
+            </padding>
+            <children>
+                <VBox alignment="CENTER" spacing="4.0">
+                    <children>
+                        <Label styleClass="header-title" text="Update Student" />
+                        <Label styleClass="header-description" text="Find a student and update their information." />
+                    </children>
+                </VBox>
+
+                <AnchorPane HBox.hgrow="ALWAYS" />
+
+                <VBox alignment="CENTER" prefHeight="48.0" prefWidth="48.0" styleClass="profile-circle">
+                    <children>
+                        <Label styleClass="profile-letter" text="A" />
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="20.0" styleClass="content-area">
+            <padding>
+                <Insets bottom="35.0" left="40.0" right="40.0" top="30.0" />
+            </padding>
+
+            <children>
+                <!-- Student search section -->
+                <VBox spacing="13.0" styleClass="search-card">
+                    <padding>
+                        <Insets bottom="18.0" left="22.0" right="22.0" top="18.0" />
+                    </padding>
+
+                    <children>
+                        <Label styleClass="search-title" text="Find Student" />
+
+                        <HBox spacing="12.0">
+                            <children>
+                                <TextField fx:id="txtSearchStudentId" prefWidth="400.0" promptText="Enter Student ID" styleClass="input-field" />
+
+                                <Button onAction="#searchStudentOnAction" styleClass="search-button" text="Search" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+
+                <!-- Update form -->
+                <VBox spacing="10.0">
+                    <children>
+                        <Label styleClass="page-title" text="Student Details" />
+                        <Label styleClass="page-description" text="Email address cannot be changed after registration." />
+                    </children>
+                </VBox>
+
+                <VBox spacing="22.0" styleClass="form-card">
+                    <padding>
+                        <Insets bottom="25.0" left="30.0" right="30.0" top="25.0" />
+                    </padding>
+
+                    <children>
+                        <GridPane hgap="25.0" vgap="16.0">
+                            <columnConstraints>
+                                <ColumnConstraints percentWidth="50.0" />
+                                <ColumnConstraints percentWidth="50.0" />
+                            </columnConstraints>
+
+                            <children>
+                                <VBox spacing="7.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                    <children>
+                                        <Label styleClass="input-label" text="Student Name *" />
+                                        <TextField fx:id="txtStudentName" promptText="Student name" styleClass="input-field" />
+                                    </children>
+                                </VBox>
+
+                                <VBox spacing="7.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                                    <children>
+                                        <Label styleClass="input-label" text="NIC Number *" />
+                                        <TextField fx:id="txtNic" promptText="NIC number" styleClass="input-field" />
+                                    </children>
+                                </VBox>
+
+                                <!-- Email is disabled -->
+                                <VBox spacing="7.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                    <children>
+                                        <Label styleClass="input-label" text="Email Address (Cannot be changed)" />
+                                        <TextField fx:id="txtEmail" editable="false" styleClass="input-field, disabled-field" />
+                                    </children>
+                                </VBox>
+
+                                <VBox spacing="7.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <children>
+                                        <Label styleClass="input-label" text="Date of Birth *" />
+                                        <DatePicker fx:id="dateBirthday" promptText="Select date of birth" styleClass="date-picker" />
+                                    </children>
+                                </VBox>
+
+                                <VBox spacing="7.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                                    <children>
+                                        <Label styleClass="input-label" text="Batch *" />
+                                        <ComboBox fx:id="cmbBatch" promptText="Select batch" styleClass="combo-box" />
+                                    </children>
+                                </VBox>
+
+                                <VBox spacing="7.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <children>
+                                        <Label styleClass="input-label" text="Student ID" />
+                                        <TextField fx:id="txtStudentId" editable="false" styleClass="input-field, disabled-field" />
+                                    </children>
+                                </VBox>
+
+                                <VBox spacing="7.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                                    <children>
+                                        <Label styleClass="input-label" text="Address *" />
+                                        <TextArea fx:id="txtAddress" prefHeight="72.0" promptText="Student address" styleClass="address-field" wrapText="true" />
+                                    </children>
+                                </VBox>
+                            </children>
+                     <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                     </rowConstraints>
+                        </GridPane>
+
+                        <HBox alignment="CENTER_RIGHT" spacing="12.0">
+                            <children>
+                                <Button onAction="#clearOnAction" styleClass="cancel-button" text="Cancel" />
+
+                                <Button onAction="#updateStudentDetailsOnAction" styleClass="update-button" text="✓ Update Student" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

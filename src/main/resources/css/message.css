@@ -1,0 +1,94 @@
+.message-card {
+    -fx-background-color: white;
+    -fx-background-radius: 14px;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(15, 23, 42, 0.18), 22, 0, 0, 7);
+}
+
+.message-icon {
+    -fx-min-width: 48px;
+    -fx-min-height: 48px;
+    -fx-max-width: 48px;
+    -fx-max-height: 48px;
+    -fx-background-radius: 50%;
+    -fx-font-size: 23px;
+    -fx-font-weight: bold;
+}
+
+.message-title {
+    -fx-text-fill: #0f172a;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.message-description {
+    -fx-text-fill: #64748b;
+    -fx-font-size: 13px;
+}
+
+.message-button {
+    -fx-pref-width: 95px;
+    -fx-pref-height: 38px;
+    -fx-background-radius: 8px;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+/* Success */
+.success-icon {
+    -fx-background-color: #dcfce7;
+    -fx-text-fill: #16a34a;
+}
+
+.success-button {
+    -fx-background-color: #16a34a;
+}
+
+.success-button:hover {
+    -fx-background-color: #15803d;
+}
+
+/* Error */
+.error-icon {
+    -fx-background-color: #fee2e2;
+    -fx-text-fill: #dc2626;
+}
+
+.error-button {
+    -fx-background-color: #dc2626;
+}
+
+.error-button:hover {
+    -fx-background-color: #b91c1c;
+}
+
+/* Warning */
+.warning-icon {
+    -fx-background-color: #fef3c7;
+    -fx-text-fill: #d97706;
+}
+
+.warning-button {
+    -fx-background-color: #d97706;
+}
+
+.warning-button:hover {
+    -fx-background-color: #b45309;
+}
+
+/* Information */
+.info-icon {
+    -fx-background-color: #dbeafe;
+    -fx-text-fill: #2563eb;
+}
+
+.info-button {
+    -fx-background-color: #2563eb;
+}
+
+.info-button:hover {
+    -fx-background-color: #1d4ed8;
+}

@@ -1,0 +1,218 @@
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-background-color: #f4f7fb;
+}
+
+/* Sidebar */
+.sidebar {
+    -fx-background-color: linear-gradient(to bottom, #2563eb, #1e3a8a);
+    -fx-min-width: 240px;
+    -fx-pref-width: 240px;
+}
+
+.sidebar-logo {
+    -fx-text-fill: white;
+    -fx-font-size: 27px;
+    -fx-font-weight: bold;
+}
+
+.sidebar-subtitle {
+    -fx-text-fill: #bfdbfe;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 4px 0 0 2px;
+}
+
+.menu-button {
+    -fx-pref-width: 200px;
+    -fx-pref-height: 44px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-border-width: 0;
+    -fx-text-fill: #e0ecff;
+    -fx-font-size: 14px;
+    -fx-background-radius: 9px;
+    -fx-padding: 0 14px;
+    -fx-cursor: hand;
+}
+
+.menu-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.16);
+    -fx-text-fill: white;
+}
+
+.active-menu {
+    -fx-background-color: white;
+    -fx-text-fill: #2563eb;
+    -fx-font-weight: bold;
+}
+
+.logout-button {
+    -fx-pref-width: 200px;
+    -fx-pref-height: 44px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-background-color: #dc2626;
+    -fx-background-radius: 9px;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+/* Header */
+.top-header {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #e2e8f0 transparent;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.header-title {
+    -fx-text-fill: #172554;
+    -fx-font-size: 23px;
+    -fx-font-weight: bold;
+}
+
+.header-description {
+    -fx-text-fill: #64748b;
+    -fx-font-size: 13px;
+}
+
+.profile-circle {
+    -fx-background-color: #dbeafe;
+    -fx-background-radius: 50%;
+}
+
+.profile-letter {
+    -fx-text-fill: #2563eb;
+    -fx-font-size: 19px;
+    -fx-font-weight: bold;
+}
+
+/* Content */
+.content-area {
+    -fx-background-color: #f4f7fb;
+}
+
+.page-title {
+    -fx-text-fill: #172554;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.page-description {
+    -fx-text-fill: #64748b;
+    -fx-font-size: 13px;
+}
+
+.form-card {
+    -fx-background-color: white;
+    -fx-background-radius: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(15, 23, 42, 0.10), 14, 0, 0, 3);
+}
+
+.input-label {
+    -fx-text-fill: #334155;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.input-field,
+.address-field,
+.date-picker,
+.combo-box {
+    -fx-font-size: 13px;
+}
+
+/* Text input fields */
+.input-field {
+    -fx-pref-height: 42px;
+    -fx-background-color: #f8fafc;
+    -fx-background-radius: 8px;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 8px;
+    -fx-padding: 0 12px;
+}
+
+.input-field:focused {
+    -fx-background-color: white;
+    -fx-border-color: #2563eb;
+    -fx-border-width: 1.5px;
+}
+
+.disabled-field {
+    -fx-background-color: #e2e8f0;
+    -fx-text-fill: #64748b;
+}
+
+/* Address field */
+.address-field {
+    -fx-background-color: #f8fafc;
+    -fx-background-radius: 8px;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 8px;
+    -fx-padding: 8px;
+}
+
+.address-field:focused {
+    -fx-background-color: white;
+    -fx-border-color: #2563eb;
+    -fx-border-width: 1.5px;
+}
+
+/* DatePicker and ComboBox */
+.date-picker,
+.combo-box {
+    -fx-pref-height: 42px;
+    -fx-background-color: #f8fafc;
+    -fx-background-radius: 8px;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 8px;
+}
+
+.date-picker:focused,
+.combo-box:focused {
+    -fx-border-color: #2563eb;
+    -fx-border-width: 1.5px;
+}
+
+.date-picker .text-field {
+    -fx-background-color: transparent;
+}
+
+.combo-box .list-cell {
+    -fx-padding: 0 10px;
+}
+
+/* Buttons */
+.clear-button {
+    -fx-pref-height: 42px;
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 8px;
+    -fx-text-fill: #475569;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.clear-button:hover {
+    -fx-background-color: #f1f5f9;
+}
+
+.save-button {
+    -fx-pref-height: 42px;
+    -fx-background-color: #2563eb;
+    -fx-background-radius: 8px;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.save-button:hover {
+    -fx-background-color: #1d4ed8;
+}

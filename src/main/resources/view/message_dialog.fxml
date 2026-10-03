@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="dialogCard" alignment="CENTER" prefHeight="215.0" prefWidth="400.0" spacing="22.0" styleClass="message-card" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.message.MessagePageController">
+
+    <padding>
+        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+    </padding>
+
+    <children>
+        <HBox alignment="CENTER_LEFT" spacing="14.0" stylesheets="@../css/message.css">
+            <children>
+                <Label fx:id="lblIcon" alignment="CENTER" prefHeight="48.0" prefWidth="48.0" styleClass="message-icon" />
+
+                <VBox spacing="6.0">
+                    <children>
+                        <Label fx:id="lblTitle" styleClass="message-title" />
+
+                        <Label fx:id="lblDescription" maxWidth="275.0" styleClass="message-description" wrapText="true" />
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+
+        <Button fx:id="btnAction" mnemonicParsing="false" onAction="#closeOnAction" styleClass="message-button" text="OK" />
+    </children>
+</VBox>
