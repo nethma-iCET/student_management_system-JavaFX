@@ -50,7 +50,7 @@
                 <TextField fx:id="txtUserName" prefHeight="44.0" promptText="Enter your username" styleClass="input-field" />
 
                 <Label styleClass="input-label" text="Password" />
-                <PasswordField fx:id="txtPassword" prefHeight="44.0" promptText="Enter your password" styleClass="input-field" />
+                <PasswordField fx:id="txtPassword" onKeyPressed="#txtPasswordOnAction" prefHeight="44.0" promptText="Enter your password" styleClass="input-field" />
 
                 <Label styleClass="forgot-password" text="Forgot password?" />
 

@@ -51,17 +51,17 @@ public class MainDashboardPageController {
 
     @FXML
     void addStudentOnAction(ActionEvent event) {
-
+//        SceneManager.switchStage("/view/add_student_page.fxml");
     }
 
     @FXML
     void dashboardOnAction(ActionEvent event) {
-
+//        SceneManager.switchStage("/view/main_dashboard.fxml");
     }
 
     @FXML
     void deleteStudentOnAction(ActionEvent event) {
-
+//        SceneManager.switchStage("/view/delete_student_page.fxml");
     }
 
     @FXML

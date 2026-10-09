@@ -1,5 +1,6 @@
 package controllers.student;
 
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
@@ -47,6 +48,7 @@ public class AddStudentPageController {
 
     @FXML
     void dashboardOnAction(ActionEvent event) {
+//        SceneManager.switchStage("/view/main_dashboard.fxml");
 
     }
 
