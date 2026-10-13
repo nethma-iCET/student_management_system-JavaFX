@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import scene.SceneManager;
 
 public class MainDashboardPageController {
 
@@ -51,17 +52,17 @@ public class MainDashboardPageController {
 
     @FXML
     void addStudentOnAction(ActionEvent event) {
-//        SceneManager.switchStage("/view/add_student_page.fxml");
+        SceneManager.switchPage("/view/add_student_page.fxml");
     }
 
     @FXML
     void dashboardOnAction(ActionEvent event) {
-//        SceneManager.switchStage("/view/main_dashboard.fxml");
+       SceneManager.switchPage("/view/main_dashboard.fxml");
     }
 
     @FXML
     void deleteStudentOnAction(ActionEvent event) {
-//        SceneManager.switchStage("/view/delete_student_page.fxml");
+        SceneManager.switchPage("/view/delete_student_page.fxml");
     }
 
     @FXML

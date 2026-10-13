@@ -7,6 +7,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import scene.SceneManager;
 
 public class AddStudentPageController {
 
@@ -38,7 +39,7 @@ public class AddStudentPageController {
 
     @FXML
     void addStudentOnAction(ActionEvent event) {
-
+        SceneManager.switchPage("/view/add_student_page.fxml");
     }
 
     @FXML
@@ -48,13 +49,13 @@ public class AddStudentPageController {
 
     @FXML
     void dashboardOnAction(ActionEvent event) {
-//        SceneManager.switchStage("/view/main_dashboard.fxml");
+        SceneManager.switchPage("/view/main_dashboard.fxml");
 
     }
 
     @FXML
     void deleteStudentOnAction(ActionEvent event) {
-
+        SceneManager.switchPage("/view/delete_student_page.fxml");
     }
 
     @FXML
@@ -74,7 +75,7 @@ public class AddStudentPageController {
 
     @FXML
     void updateStudentOnAction(ActionEvent event) {
-
+        SceneManager.switchPage("/view/update_student_page.fxml");
     }
 
     @FXML

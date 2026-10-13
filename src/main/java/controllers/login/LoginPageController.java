@@ -9,13 +9,13 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
+import scene.SceneManager;
 
 import java.io.IOException;
 
 public class LoginPageController {
 
     LoginController loginController = new LoginController();
-    Stage mainDashboardStage = new Stage();
 
     @FXML
     private Button btnLogIn;
@@ -29,13 +29,8 @@ public class LoginPageController {
     @FXML
     void btnLoginOnAction(ActionEvent event) {
        if(loginController.checkUserNameandPassword(txtUserName.getText(), txtPassword.getText())){
-            try {
-                mainDashboardStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/main_dashboard.fxml"))));
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-            mainDashboardStage.show();
-        }
+           SceneManager.switchPage("/view/main_dashboard.fxml");
+       }
     }
 
     public void txtPasswordOnAction(KeyEvent keyEvent) {
