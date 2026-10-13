@@ -1,18 +1,25 @@
 package controllers.student;
 
 
+import javafx.beans.Observable;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import scene.SceneManager;
 
-public class AddStudentPageController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class AddStudentPageController implements Initializable {
 
     @FXML
-    private ComboBox<?> cmbBatch;
+    private ComboBox<String> cmbBatch;
 
     @FXML
     private DatePicker dateBirthday;
@@ -82,5 +89,23 @@ public class AddStudentPageController {
     void viewStudentsOnAction(ActionEvent event) {
 
     }
+    // load batch details into the comboBox
+    ObservableList<String> batches = FXCollections.observableArrayList(
+            "iCM120",
+            "iCD121",
+            "iCD122",
+            "iCM123",
+            "iCD124",
+            "iCD125"
+    );
 
+    public void loadBatches(){
+        cmbBatch.setItems(batches);
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        loadBatches();
+    }
+    //----------------------------------------
 }
