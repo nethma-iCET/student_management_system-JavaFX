@@ -6,7 +6,7 @@ import java.sql.*;
 
 public class LoginController {
 
-    Connection connection = DBConnection.getConnection();
+    Connection connection = DBConnection.getInstance().getConnection();
 
     public boolean checkUserNameandPassword(String userName, String password) {
 

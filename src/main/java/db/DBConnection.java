@@ -6,9 +6,10 @@ import java.sql.SQLException;
 
 public class DBConnection {
 
-    public static Connection getConnection(){
+    private static Connection connection;
+    private static DBConnection instance;
 
-        Connection connection = null;
+    private DBConnection(){
         try {
             connection = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/student_management_system_v1",
@@ -17,7 +18,19 @@ public class DBConnection {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
 
+    public static DBConnection getInstance(){
+        if(instance == null){
+            instance = new DBConnection();
+        }
+
+        return instance;
+    }
+
+    public Connection getConnection(){
         return connection;
     }
+
+
 }
