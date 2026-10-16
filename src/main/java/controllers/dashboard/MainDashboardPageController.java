@@ -82,7 +82,7 @@ public class MainDashboardPageController {
 
     @FXML
     void viewStudentsOnAction(ActionEvent event) {
-
+        SceneManager.switchPage("/view/view_student_page.fxml");
     }
 
 }

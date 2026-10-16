@@ -149,7 +149,7 @@ public class DeleteStudentPageController implements Initializable {
 
     @FXML
     void viewStudentsOnAction(ActionEvent event) {
-
+        SceneManager.switchPage("/view/view_student_page.fxml");
     }
 
     private void clearFields() {
