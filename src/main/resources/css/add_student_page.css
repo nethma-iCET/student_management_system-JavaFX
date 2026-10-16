@@ -216,3 +216,18 @@
 .save-button:hover {
     -fx-background-color: #1d4ed8;
 }
+
+.generate-button {
+    -fx-pref-height: 42px;
+    -fx-background-color: #0284c7;
+    -fx-background-radius: 8px;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.generate-button:hover {
+    -fx-background-color: #0369a1;
+}
