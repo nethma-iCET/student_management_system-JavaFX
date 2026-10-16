@@ -88,11 +88,11 @@
 
                     <children>
                         <Label styleClass="search-title" text="Search Student" />
-                        <Label styleClass="search-description" text="Enter a Student ID to view the student record." />
+                        <Label styleClass="search-description" text="Enter a Student ID or Name to view the student record." />
 
                         <HBox spacing="12.0">
                             <children>
-                                <TextField fx:id="txtSearchStudentId" prefWidth="400.0" promptText="Enter Student ID" styleClass="input-field" />
+                                <TextField fx:id="txtSearchStudentId" onAction="#searchStudentOnAction" prefWidth="400.0" promptText="Enter Student ID or Name" styleClass="input-field" />
 
                                 <Button onAction="#searchStudentOnAction" styleClass="search-button" text="Search" />
                             </children>
