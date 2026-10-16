@@ -46,7 +46,7 @@ public class UpdateStudentPageController implements Initializable {
 
     @FXML
     void addMarksOnAction(ActionEvent event) {
-
+        SceneManager.switchPage("/view/add_marks_page.fxml");
     }
 
     @FXML
@@ -76,7 +76,7 @@ public class UpdateStudentPageController implements Initializable {
 
     @FXML
     void manageSubjectsOnAction(ActionEvent event) {
-
+        SceneManager.switchPage("/view/manage_subjects_page.fxml");
     }
 
     @FXML

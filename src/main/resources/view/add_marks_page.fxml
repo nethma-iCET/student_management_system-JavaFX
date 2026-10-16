@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="650.0" prefWidth="1100.0" stylesheets="@../css/add_marks_page.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.marks.AddMarksPageController">
+
+    <!-- LEFT SIDEBAR -->
+    <left>
+        <VBox prefWidth="240.0" styleClass="sidebar">
+            <padding>
+                <Insets bottom="25.0" left="20.0" right="20.0" top="28.0" />
+            </padding>
+
+            <children>
+                <Label styleClass="sidebar-logo" text="StudentHub" />
+                <Label styleClass="sidebar-subtitle" text="ADMIN PANEL" />
+
+                <VBox spacing="8.0">
+                    <padding>
+                        <Insets top="42.0" />
+                    </padding>
+                    <children>
+                        <Button onAction="#dashboardOnAction" styleClass="menu-button" text="⌂   Dashboard" />
+                        <Button onAction="#addStudentOnAction" styleClass="menu-button" text="👨‍🎓   Add Student" />
+                        <Button onAction="#updateStudentOnAction" styleClass="menu-button" text="✎   Update Student" />
+                        <Button onAction="#deleteStudentOnAction" styleClass="menu-button" text="⌫   Delete Student" />
+                        <Button onAction="#viewStudentsOnAction" styleClass="menu-button" text="☷   View Students" />
+                        <Button onAction="#addMarksOnAction" styleClass="menu-button, active-menu" text="★   Add Marks" />
+                        <Button onAction="#manageSubjectsOnAction" styleClass="menu-button" text="▣   Manage Subjects" />
+                    </children>
+                </VBox>
+
+                <AnchorPane VBox.vgrow="ALWAYS" />
+
+                <Button onAction="#logoutOnAction" styleClass="logout-button" text="⇥   Log Out" />
+            </children>
+        </VBox>
+    </left>
+
+    <!-- HEADER -->
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="90.0" styleClass="top-header">
+            <padding>
+                <Insets left="35.0" right="35.0" />
+            </padding>
+            <children>
+                <VBox alignment="CENTER_LEFT" spacing="4.0">
+                    <children>
+                        <Label styleClass="header-title" text="Student Marks" />
+                        <Label styleClass="header-description" text="Record exam marks, assign grades, and manage student performance." />
+                    </children>
+                </VBox>
+
+                <AnchorPane HBox.hgrow="ALWAYS" />
+
+                <VBox alignment="CENTER" prefHeight="45.0" prefWidth="45.0" styleClass="profile-circle">
+                    <children>
+                        <Label styleClass="profile-letter" text="A" />
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </top>
+
+    <!-- CENTER CONTENT -->
+    <center>
+        <HBox spacing="20.0" styleClass="content-area">
+            <padding>
+                <Insets bottom="25.0" left="30.0" right="30.0" top="20.0" />
+            </padding>
+
+            <children>
+                <!-- LEFT FORM CARD -->
+                <VBox prefWidth="380.0" spacing="14.0" styleClass="card-box">
+                    <padding>
+                        <Insets bottom="22.0" left="22.0" right="22.0" top="20.0" />
+                    </padding>
+
+                    <children>
+                        <VBox spacing="3.0">
+                            <children>
+                                <Label styleClass="section-title" text="Record Marks" />
+                                <Label styleClass="section-subtitle" text="Search student, choose subject, and enter score." />
+                            </children>
+                        </VBox>
+
+                        <!-- Student ID -->
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label styleClass="form-label" text="Student ID *" />
+                                <TextField fx:id="txtStudentId" prefHeight="38.0" promptText="Type ID or Name for suggestions..." styleClass="input-field" />
+                            </children>
+                        </VBox>
+
+                        <!-- Student Name (read-only) -->
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label styleClass="form-label" text="Student Name" />
+                                <TextField fx:id="txtStudentName" editable="false" prefHeight="38.0" promptText="Auto-populated student name" styleClass="input-field-readonly" />
+                            </children>
+                        </VBox>
+
+                        <!-- Subject -->
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label styleClass="form-label" text="Subject *" />
+                                <ComboBox fx:id="cmbSubject" maxWidth="1.7976931348623157E308" prefHeight="38.0" promptText="Select Subject" styleClass="combo-box" />
+                            </children>
+                        </VBox>
+
+                        <!-- Marks & Grade Preview -->
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label styleClass="form-label" text="Marks (0 - 100) *" />
+                                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                    <children>
+                                        <TextField fx:id="txtMarks" prefHeight="38.0" promptText="e.g. 85.5" styleClass="input-field" HBox.hgrow="ALWAYS" />
+                                        <Label fx:id="lblGradePreview" alignment="CENTER" prefHeight="38.0" prefWidth="120.0" styleClass="grade-badge" text="Grade: -" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+
+                        <!-- Exam Date -->
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label styleClass="form-label" text="Exam Date" />
+                                <DatePicker fx:id="dateExam" maxWidth="1.7976931348623157E308" prefHeight="38.0" promptText="Select Exam Date" styleClass="date-picker" />
+                            </children>
+                        </VBox>
+
+                        <AnchorPane VBox.vgrow="ALWAYS" />
+
+                        <!-- Action Buttons -->
+                        <VBox spacing="10.0">
+                            <children>
+                                <HBox spacing="10.0">
+                                    <children>
+                                        <Button maxWidth="1.7976931348623157E308" onAction="#saveMarkOnAction" prefHeight="40.0" styleClass="btn-save" text="＋ Save Marks" HBox.hgrow="ALWAYS" />
+                                        <Button maxWidth="1.7976931348623157E308" onAction="#updateMarkOnAction" prefHeight="40.0" styleClass="btn-update" text="✎ Update" HBox.hgrow="ALWAYS" />
+                                    </children>
+                                </HBox>
+                                <HBox spacing="10.0">
+                                    <children>
+                                        <Button maxWidth="1.7976931348623157E308" onAction="#deleteMarkOnAction" prefHeight="40.0" styleClass="btn-delete" text="🗑 Delete" HBox.hgrow="ALWAYS" />
+                                        <Button maxWidth="1.7976931348623157E308" onAction="#clearOnAction" prefHeight="40.0" styleClass="btn-clear" text="↻ Clear" HBox.hgrow="ALWAYS" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+
+                <!-- RIGHT TABLE CARD -->
+                <VBox spacing="14.0" styleClass="card-box" HBox.hgrow="ALWAYS">
+                    <padding>
+                        <Insets bottom="16.0" left="18.0" right="18.0" top="18.0" />
+                    </padding>
+
+                    <children>
+                        <!-- Table Top Toolbar -->
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                            <children>
+                                <TextField fx:id="txtSearchMarks" prefHeight="38.0" prefWidth="220.0" promptText="Search student or subject..." styleClass="input-field" />
+                                <ComboBox fx:id="cmbFilterSubject" prefHeight="38.0" prefWidth="170.0" promptText="All Subjects" styleClass="combo-box" />
+                                <Button onAction="#refreshTableOnAction" prefHeight="38.0" styleClass="action-btn-secondary" text="⟳ Refresh" />
+                                <AnchorPane HBox.hgrow="ALWAYS" />
+                                <Label fx:id="lblMarksCount" styleClass="count-badge" text="Total: 0 Records" />
+                            </children>
+                        </HBox>
+
+                        <!-- Table -->
+                        <TableView fx:id="tblMarks" styleClass="custom-table" VBox.vgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="colMarkId" prefWidth="45.0" text="#" />
+                                <TableColumn fx:id="colStudentId" prefWidth="110.0" text="Student ID" />
+                                <TableColumn fx:id="colStudentName" prefWidth="140.0" text="Student Name" />
+                                <TableColumn fx:id="colSubject" prefWidth="140.0" text="Subject" />
+                                <TableColumn fx:id="colMarks" prefWidth="65.0" text="Marks" />
+                                <TableColumn fx:id="colGrade" prefWidth="55.0" text="Grade" />
+                                <TableColumn fx:id="colExamDate" prefWidth="95.0" text="Exam Date" />
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                        </TableView>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </center>
+
+</BorderPane>

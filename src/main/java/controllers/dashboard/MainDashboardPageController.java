@@ -47,7 +47,7 @@ public class MainDashboardPageController {
 
     @FXML
     void addMarksOnAction(ActionEvent event) {
-
+        SceneManager.switchPage("/view/add_marks_page.fxml");
     }
 
     @FXML
@@ -57,7 +57,7 @@ public class MainDashboardPageController {
 
     @FXML
     void dashboardOnAction(ActionEvent event) {
-       SceneManager.switchPage("/view/main_dashboard.fxml");
+        SceneManager.switchPage("/view/main_dashboard.fxml");
     }
 
     @FXML
@@ -67,17 +67,17 @@ public class MainDashboardPageController {
 
     @FXML
     void logoutOnAction(ActionEvent event) {
-
+        SceneManager.switchPage("/view/login_page.fxml");
     }
 
     @FXML
     void manageSubjectsOnAction(ActionEvent event) {
-
+        SceneManager.switchPage("/view/manage_subjects_page.fxml");
     }
 
     @FXML
     void updateStudentOnAction(ActionEvent event) {
-
+        SceneManager.switchPage("/view/update_student_page.fxml");
     }
 
     @FXML
