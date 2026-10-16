@@ -91,7 +91,7 @@
 
                         <HBox spacing="12.0">
                             <children>
-                                <TextField fx:id="txtSearchStudentId" prefWidth="400.0" promptText="Enter Student ID" styleClass="input-field" />
+                                <TextField fx:id="txtSearchStudentId" onAction="#searchStudentOnAction" prefWidth="400.0" promptText="Enter Student ID or Name" styleClass="input-field" />
 
                                 <Button onAction="#searchStudentOnAction" styleClass="search-button" text="Search" />
                             </children>
